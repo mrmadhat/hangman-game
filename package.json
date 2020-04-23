@@ -20,13 +20,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "src/**/*.js": [
       "eslint --fix",
-      "test:staged"
+      "npm run test:staged"
     ]
   },
   "browserslist": {
