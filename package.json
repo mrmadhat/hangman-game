@@ -1,6 +1,6 @@
 {
   "name": "hangman-app",
-  "homepage": "http://mrmadhat.github.io/hangman-game",
+  "homepage": "http://hangman.mrmadhat.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
