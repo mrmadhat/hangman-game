@@ -1,4 +1,11 @@
 .Game {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
   padding: 10px;
+}
+
+.Game-header {
+  display: flex;
+  justify-content: space-between;
 }

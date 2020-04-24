@@ -1,0 +1,21 @@
+.letter-picker-wrap {
+  margin-top: 40px;
+}
+
+.letter-picker {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.button--letter-picker {
+  margin: 5px;
+  font-size: 60px;
+  min-width: 60px;
+  line-height: 1.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31%;
+}

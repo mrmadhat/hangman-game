@@ -1,3 +1,9 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Patrick Hand", cursive;
@@ -7,8 +13,18 @@ body {
   background: #49b7d8;
 }
 
-h1 {
+h1,
+h2,
+p {
   color: #fff;
-  font-size: 49px;
   font-weight: normal;
+}
+
+h1 {
+  font-size: 49px;
+}
+
+h2,
+p {
+  font-size: 30px;
 }

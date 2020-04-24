@@ -1,9 +1,11 @@
 import React from "react"
+import clsx from "clsx"
+
 import "./Button.css"
 
-const Button = ({ children, ...props }) => {
+const Button = ({ children, className, ...props }) => {
   return (
-    <button className="button" {...props}>
+    <button className={clsx("button", className)} {...props}>
       {children}
     </button>
   )

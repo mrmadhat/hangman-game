@@ -1,0 +1,28 @@
+.hidden-letter {
+  display: inline-block;
+  font-size: 26px;
+  min-width: 26px;
+  min-height: 26px;
+  border-bottom: 2px solid;
+  border-color: #fff;
+  margin: 0 5px;
+  padding: 5px;
+  color: #fff;
+  vertical-align: bottom;
+}
+
+.hidden-letter--known {
+  color: #fae732;
+  border-color: #fae732;
+}
+
+@media (min-width: 796px) {
+  .hidden-letter {
+    font-size: 46px;
+    min-width: 46px;
+    min-height: 86px;
+    border-bottom: 4px solid;
+    margin: 0 10px;
+    padding: 10px;
+  }
+}

@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Hangman
+
+Play a simple game of hangman!
+
+## Words
+
+The words used in this project are taken from [this](https://github.com/first20hours/google-10000-english) repo.
 
 ## Available Scripts
 

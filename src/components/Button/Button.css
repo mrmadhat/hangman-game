@@ -12,6 +12,17 @@
   cursor: pointer;
 }
 
-.button:hover {
+.button span {
+  margin-block-start: 0;
+  margin-block-end: 8px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.button:hover:not(:disabled) {
   transform: scale(1.2);
+}
+
+.button:disabled {
+  cursor: default;
 }

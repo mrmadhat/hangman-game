@@ -6,6 +6,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "clsx": "^1.1.0",
+    "lodash.shuffle": "^4.2.0",
+    "lodash.uniq": "^4.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
@@ -14,7 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:staged": "cross-env CI=true react-scripts test --env=jsdom",
+    "test:staged": "cross-env CI=true react-scripts test --env=jsdom --passWithNoTests",
     "eject": "react-scripts eject",
     "lint": "eslint ."
   },
