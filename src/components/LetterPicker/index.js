@@ -8,6 +8,7 @@ const LetterPicker = ({ choices, onClick }) => (
     <div className="letter-picker">
       {choices.map((letter, ind) => (
         <Button
+          key={ind}
           className="button--letter-picker"
           onClick={() => onClick(letter)}
         >

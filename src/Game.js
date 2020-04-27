@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 
 import uniq from "lodash.uniq"
 import shuffle from "lodash.shuffle"
@@ -52,28 +52,31 @@ function Game() {
   const [livesRemaining, setLivesRemaining] = useState(defaultLives)
   const [notify, setNotify] = useState(false)
 
-  const resetGame = () => {
+  const generateChoices = useCallback(
+    (nextKnownLetters = []) => {
+      if (!currentWord.length) return nextKnownLetters
+
+      const unknownLetters = currentWord.filter(
+        (letter) => !nextKnownLetters.includes(letter)
+      )
+      const correctChoice = getRandomItem(unknownLetters)
+
+      const badLetters = alphabet.filter(
+        (letter) => !currentWord.includes(letter)
+      )
+      const badChoices = shuffle(badLetters).splice(0, 5)
+
+      return shuffle([correctChoice, ...badChoices])
+    },
+    [currentWord]
+  )
+
+  const resetGame = useCallback(() => {
     setCurrentWord(pickWord())
     setLivesRemaining(defaultLives)
     setChoices(generateChoices())
     setKnownLetters([])
-  }
-
-  const generateChoices = (nextKnownLetters = []) => {
-    if (!currentWord.length) return nextKnownLetters
-
-    const unknownLetters = currentWord.filter(
-      (letter) => !nextKnownLetters.includes(letter)
-    )
-    const correctChoice = getRandomItem(unknownLetters)
-
-    const badLetters = alphabet.filter(
-      (letter) => !currentWord.includes(letter)
-    )
-    const badChoices = shuffle(badLetters).splice(0, 5)
-
-    return shuffle([correctChoice, ...badChoices])
-  }
+  }, [generateChoices])
 
   useEffect(() => {
     if (!currentWord.length) {
